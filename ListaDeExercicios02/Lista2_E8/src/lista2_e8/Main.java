@@ -3,19 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lista2_e9;
+package lista2_e8;
 
 /**
  *
- * @author Thiago
+ * @author Thiago de Almeida Lopes, 201765556AC
+ * Segunda Lista de Exercícios
+ * 
  */
-public class Lista2_E9 {
+public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Eleicoes e = new Eleicoes();
+        
+        e.lerVotos();
+        e.imprimeResultado();
     }
     
 }

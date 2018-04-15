@@ -7,7 +7,9 @@ package lista2_e5;
 
 /**
  *
- * @author Thiago
+ * @author Thiago de Almeida Lopes, 201765556AC
+ * Segunda Lista de Exercícios
+ * 
  */
 public class Main {
 
