@@ -61,6 +61,8 @@ public class Eleicoes {
         System.out.println("Votos no candidato 4: " + tipoVotos[4]);
         System.out.println("\nVotos em branco: " + tipoVotos[0]);
         System.out.println("Votos em nulos: " + tipoVotos[0]);
+        
+        System.out.println("Total de eleitores: " + votos.size());
 
     }
 }
