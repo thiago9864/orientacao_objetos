@@ -16,6 +16,13 @@ public class Residente extends Medico {
         super(cod, nome);
         this.periodo = periodo;
     }
-    
-    
+
+    public int getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
+    }
+       
 }

@@ -25,5 +25,4 @@ public class Docente extends Medico {
         this.CRM = CRM;
     }
     
-   
 }

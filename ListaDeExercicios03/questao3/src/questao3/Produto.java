@@ -3,27 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package questao1;
+package questao3;
 
 /**
  *
  * @author Thiago
  */
-public class Medico {
-    private int cod;
+public class Produto {
     private String nome;
+    private float preco;
 
-    public Medico(int cod, String nome) {
-        this.cod = cod;
+    public Produto(String nome, float preco) {
         this.nome = nome;
-    }
-
-    public int getCod() {
-        return cod;
-    }
-
-    public void setCod(int cod) {
-        this.cod = cod;
+        this.preco = preco;
     }
 
     public String getNome() {
@@ -33,5 +25,14 @@ public class Medico {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+    
     
 }

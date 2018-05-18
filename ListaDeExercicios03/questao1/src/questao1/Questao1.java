@@ -5,6 +5,8 @@
  */
 package questao1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Thiago
@@ -17,10 +19,16 @@ public class Questao1 {
     public static void main(String[] args) {
         // TODO code application logic here
         Docente d = new Docente(1234, 1, "Doutor Siclano");
+        Residente r = new Residente(6, 1, "Doutor Estranho");
         Paciente p = new Paciente(123, "Beltrano", "23/05/1990", "Masculino");
         PedidoExame pe = new PedidoExame();
+        ArrayList<PedidoExame> arrayPedidoExame = new ArrayList<PedidoExame>();
         
-        pe.emitirPedido(2, "Hemograma", "14/05/2018", "Z00", p, d);
+        //pedido emitido pelo docente
+        arrayPedidoExame.add(pe.emitirPedido(1, "Hemograma", "14/05/2018", "Z00", p, d));
+        
+        //pedido emitido pelo residente
+        arrayPedidoExame.add(pe.emitirPedido(2, "Tomografia", "17/05/2018", "B15", p, r));
     }
     
 }

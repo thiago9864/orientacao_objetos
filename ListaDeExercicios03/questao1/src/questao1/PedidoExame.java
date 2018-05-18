@@ -33,7 +33,7 @@ public class PedidoExame {
         this.medico = medico;
     }
     
-    public void emitirPedido(int codExame, String nomeExame, String dataRealizacao, String CID, Paciente paciente, Medico medico) {
+    public PedidoExame emitirPedido(int codExame, String nomeExame, String dataRealizacao, String CID, Paciente paciente, Medico medico) {
         this.numeroPedido = contador++;
         this.codExame = codExame;
         this.nomeExame = nomeExame;
@@ -42,10 +42,20 @@ public class PedidoExame {
         this.impressao = false;
         this.paciente = paciente;
         this.medico = medico;
+        
+        return this;
     }
     
     public void imprimir(){
-        System.out.println("Pedido: " + this.numeroPedido);
-        System.out.println("Paciente: " + this.paciente.getNome());    
+        System.out.println("***** Pedido de Exame *****\n");
+        System.out.println("Pedido #" + this.numeroPedido);
+        System.out.println("Cod Exame: " + this.codExame);
+        System.out.println("Nome Exame: " + this.nomeExame);
+        System.out.println("Data Realização: " + this.dataRealizacao);
+        System.out.println("CID: " + this.CID);
+        System.out.println("Paciente: " + this.paciente.getNome());   
+        System.out.println("Médico: " + this.medico.getNome());
+         
+        this.impressao = true;
     }
 }
