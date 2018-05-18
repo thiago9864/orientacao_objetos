@@ -32,15 +32,12 @@ public class Pessoa {
     
     public void consultarEndereco(int pos) {
         if(pos >= 0 && pos < endereco.size()){
-            Endereco e = endereco.get(pos);
-            System.out.println("Consulta Endereco #" + pos);
-            System.out.println("Rua: " + e.getRua());
-            System.out.println("Numero: " + e.getNumero());
-            System.out.println("Bairro: " + e.getBairro());
-            System.out.println("Cidade: " + e.getCidade());
+            System.out.println("Endereco #" + pos);
+            endereco.get(pos).consultarEndereco();
         }
     }
-    public void alterarEndereco(int pos, String rua, String bairro, String cidade, int numero){{
+    
+    public void alterarEndereco(int pos, String rua, String bairro, String cidade, int numero){
         if(pos >= 0 && pos < endereco.size()){
             Endereco e = endereco.get(pos);
             e.setBairro(bairro);
@@ -49,6 +46,8 @@ public class Pessoa {
             e.setRua(rua);
         }
     }
-
+    
+    public void addEndereco(String rua, String bairro, String cidade, int numero){
+        this.endereco.add(new Endereco(rua, bairro, cidade, numero));
     }
 }

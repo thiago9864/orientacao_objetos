@@ -33,7 +33,7 @@ public class PedidoExame {
         this.medico = medico;
     }
     
-    public PedidoExame emitirPedido(int codExame, String nomeExame, String dataRealizacao, String CID, Paciente paciente, Medico medico) {
+    public void emitirPedido(int codExame, String nomeExame, String dataRealizacao, String CID, Paciente paciente, Medico medico) {
         this.numeroPedido = contador++;
         this.codExame = codExame;
         this.nomeExame = nomeExame;
@@ -42,12 +42,68 @@ public class PedidoExame {
         this.impressao = false;
         this.paciente = paciente;
         this.medico = medico;
-        
-        return this;
+    }
+
+    public int getNumeroPedido() {
+        return numeroPedido;
+    }
+
+    public void setNumeroPedido(int numeroPedido) {
+        this.numeroPedido = numeroPedido;
+    }
+
+    public int getCodExame() {
+        return codExame;
+    }
+
+    public void setCodExame(int codExame) {
+        this.codExame = codExame;
+    }
+
+    public String getNomeExame() {
+        return nomeExame;
+    }
+
+    public void setNomeExame(String nomeExame) {
+        this.nomeExame = nomeExame;
+    }
+
+    public String getDataRealizacao() {
+        return dataRealizacao;
+    }
+
+    public void setDataRealizacao(String dataRealizacao) {
+        this.dataRealizacao = dataRealizacao;
+    }
+
+    public String getCID() {
+        return CID;
+    }
+
+    public void setCID(String CID) {
+        this.CID = CID;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
     }
     
+    
+    
     public void imprimir(){
-        System.out.println("***** Pedido de Exame *****\n");
+        System.out.println("\n***** Pedido de Exame *****\n");
         System.out.println("Pedido #" + this.numeroPedido);
         System.out.println("Cod Exame: " + this.codExame);
         System.out.println("Nome Exame: " + this.nomeExame);

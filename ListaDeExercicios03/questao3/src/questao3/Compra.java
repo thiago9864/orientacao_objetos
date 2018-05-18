@@ -55,10 +55,22 @@ public class Compra {
     }
     
     public void comprar(){
+        System.out.println("*** Compra Realizada ***\n");
+        System.out.println("**Cliente**");
+        System.out.println("Nome: " + pessoa.getNome());
+        pessoa.consultarEndereco(0);
+        System.out.println("\n**Produtos**");
+        float total = 0;
+        for(Produto p : produto){
+            System.out.println("\nNome: " + p.getNome());
+            System.out.println("Preco: R$" + p.getPreco());
+            total += p.getPreco();
+        }
+        System.out.println("\nTotal: R$" + total);
         
     }
     
     public void verificarCompra(){
-        
+        //pra que serve esse metodo?
     }
 }

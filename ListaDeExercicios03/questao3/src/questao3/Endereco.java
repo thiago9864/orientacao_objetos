@@ -56,11 +56,17 @@ public class Endereco {
     
     
     public void consultarEndereco(){
-        
+        System.out.println("Rua: " + this.rua);
+        System.out.println("Numero: " + this.numero);
+        System.out.println("Bairro: " + this.bairro);
+        System.out.println("Cidade: " + this.cidade);
     }
     
-    public void alterarEndereco(){
-        
+    public void alterarEndereco(String rua, String bairro, String cidade, int numero){
+        this.rua = rua;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.numero = numero;
     }
     
 }
