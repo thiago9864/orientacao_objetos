@@ -31,23 +31,14 @@ public class FuncProfessor extends Funcionario {
         super.setNumHorasExtras(numHorasExtras); ;
     }
     
-    
-    public float calculaSalarioMes(){
-         float valorHoraTrabalhada = super.getSalarioBase() / (12 * 8);
-         float salarioMes = super.getSalarioBase();
-         
-         //conta horas extras
-         salarioMes += valorHoraTrabalhada * 2.5f * super.getNumHorasExtras();
-         
-         return salarioMes;
-    }
-    
+   
+    @Override
     public void imprime(){
         System.out.println("\n*Professor*");
         System.out.println("Nome: " + super.getNome());
         System.out.println("Faltas: " + super.getNumFaltas());
         System.out.println("Horas Extra: " + super.getNumHorasExtras());
         System.out.println("Salario Base: " + super.getSalarioBase());
-        System.out.println("Salario: R$" + Arredondamento.arredonda(calculaSalarioMes(), 2));
+        System.out.println("Salario: R$" + Arredondamento.arredonda(FolhaPagamento.calculaSalarioMes(this), 2));
     }
 }
