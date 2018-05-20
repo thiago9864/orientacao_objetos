@@ -9,7 +9,14 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Thiago de Almeida Lopes, 201765556AC
+ * @author Thiago de Almeida Lopes, 2014 vetores
+08:55
+Gabriele (UFJF)
+Ah, ok... Achei mais organizadinho a ideia dos 4 vetores... Obg gente
+08:59
+eu acho q eu não fiz vetor nessa
+08:59
+765556AC
  * Segunda Lista de Exercícios
  * 
  */

@@ -21,14 +21,34 @@ public class Questao1 {
         Docente d = new Docente(1234, 1, "Doutor Siclano");
         Residente r = new Residente(6, 1, "Doutor Estranho");
         Paciente p = new Paciente(123, "Beltrano", "23/05/1990", "Masculino");
-        PedidoExame pe = new PedidoExame();
-        ArrayList<PedidoExame> arrayPedidoExame = new ArrayList<PedidoExame>();
+        
+        PedidoExame pe1 = new PedidoExame();
+        PedidoExame pe2 = new PedidoExame();
+        
+        ResultadoExame re = new ResultadoExame();
+        LaudoMedico lm = new LaudoMedico();
+        
+        ArrayList<PedidoExame> arrayPedidoExame = new ArrayList<>();
         
         //pedido emitido pelo docente
-        arrayPedidoExame.add(pe.emitirPedido(1, "Hemograma", "14/05/2018", "Z00", p, d));
+        pe1.emitirPedido(1, "Hemograma", "14/05/2018", "Z00", p, d);
+        pe1.imprimir();
         
         //pedido emitido pelo residente
-        arrayPedidoExame.add(pe.emitirPedido(2, "Tomografia", "17/05/2018", "B15", p, r));
+        pe2.emitirPedido(2, "Tomografia", "17/05/2018", "B15", p, r);
+        pe2.imprimir();
+        
+        //residente emite resultado do exame
+        re.emitirResultadoExame(pe2, r, "Normal", "MAQ123");
+        re.gerarResExamePDF();
+        
+        //residente emite laudo do exame
+        lm.emitirLaudo("Descricao da tomografia", r, re);
+        lm.gerarLaudoMedicoPDF();
+        
+        //docente revisa o laudo
+        lm.revisarLaudo(d, "aprovado");
+        lm.gerarLaudoMedicoPDF();
     }
     
 }

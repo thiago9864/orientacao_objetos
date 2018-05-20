@@ -26,6 +26,15 @@ public class TesteRelacionamento {
         Compra c1 = new Compra("18/05/2018", pessoa1);
         c1.adicionarProduto(p1);
         c1.adicionarProduto(p2);
+        
+        c1.comprar();
+        
+        Compra c2 = new Compra("19/05/2018", pessoa2);
+        c2.adicionarProduto(p1);
+        c2.adicionarProduto(p2);
+        c2.adicionarProduto(p2);
+        
+        c2.comprar();
     }
     
 }
