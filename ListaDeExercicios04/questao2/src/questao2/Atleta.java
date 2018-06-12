@@ -9,18 +9,16 @@ package questao2;
  *
  * @author Thiago
  */
-public class Carro extends Personagem {
+public class Atleta extends Homem {    
 
-    private int capacidade = 12;
-    private int nivelCombustivel;
-    
-    public Carro(String nome){
+    public Atleta(String nome) {
         super(nome);
+        super.setCapacidade(2);
     }
-    
+
     @Override
     public void andar(int numCasas) {
-       super.addNumCasas(numCasas);
+        super.andar(numCasas * super.getCapacidade()); //To change body of generated methods, choose Tools | Templates.
     }
     
     

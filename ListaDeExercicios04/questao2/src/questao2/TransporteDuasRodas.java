@@ -11,9 +11,23 @@ package questao2;
  */
 public class TransporteDuasRodas extends Personagem {
 
+    private int capacidade = 3;
+    
+    public TransporteDuasRodas(String nome){
+        super(nome);
+    }
+
+    public int getCapacidade() {
+        return capacidade;
+    }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+    
     @Override
     public void andar(int numCasas) {
-       
+       super.addNumCasas(numCasas);
     }
     
 }

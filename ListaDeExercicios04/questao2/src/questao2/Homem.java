@@ -10,10 +10,24 @@ package questao2;
  * @author Thiago
  */
 public class Homem extends Personagem {
+    
+    private int capacidade = 1;
+    
+    public Homem(String nome){
+        super(nome);
+    }
+
+    public int getCapacidade() {
+        return capacidade;
+    }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
 
     @Override
     public void andar(int numCasas) {
-       
+       super.addNumCasas(numCasas);
     }
     
 }
