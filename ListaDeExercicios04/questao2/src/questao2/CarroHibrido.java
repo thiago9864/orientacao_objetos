@@ -12,8 +12,8 @@ package questao2;
 public class CarroHibrido extends Carro {
     private int nivelBateria;
 
-    public CarroHibrido(String nome, int nivelBateria) {
-        super(nome);
+    public CarroHibrido(String nome, int nivelCombustivel, int nivelBateria) {
+        super(nome, nivelCombustivel);
         this.nivelBateria = nivelBateria;
     }
 
@@ -27,10 +27,8 @@ public class CarroHibrido extends Carro {
 
     @Override
     public void andar(int numCasas) {
-        if(super.g >= 5){
-            super.andar(numCasas * super.getCapacidade());
-        } else {
-            System.out.println("Moto sem combustivel");
+        if(nivelBateria >= 2 || super.carroPodeAndar()){
+            super.andar(numCasas);
         }
     }
     

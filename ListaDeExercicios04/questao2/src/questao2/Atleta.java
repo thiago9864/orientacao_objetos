@@ -18,7 +18,7 @@ public class Atleta extends Homem {
 
     @Override
     public void andar(int numCasas) {
-        super.andar(numCasas * super.getCapacidade()); //To change body of generated methods, choose Tools | Templates.
+        super.andar(numCasas);
     }
     
     

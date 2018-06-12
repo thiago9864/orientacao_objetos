@@ -12,6 +12,7 @@ package questao2;
 public class Moto extends TransporteDuasRodas {
 
     private int nivelCombustivel;
+    private final int nivelMinimoCombustivel = 5;
     
     public Moto(String nome, int nivelCombustivel) {
         super(nome);        
@@ -29,9 +30,9 @@ public class Moto extends TransporteDuasRodas {
 
     @Override
     public void andar(int numCasas) {
-        if(nivelCombustivel >= 5){
-            super.andar(numCasas * super.getCapacidade());
-        } 
+        if(nivelCombustivel >= nivelMinimoCombustivel){
+            super.andar(numCasas);
+        }
     }
     
     

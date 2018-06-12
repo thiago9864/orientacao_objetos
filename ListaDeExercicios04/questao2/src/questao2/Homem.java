@@ -27,7 +27,7 @@ public class Homem extends Personagem {
 
     @Override
     public void andar(int numCasas) {
-       super.addNumCasas(numCasas);
+       super.addNumCasas(numCasas * capacidade);
     }
     
 }
