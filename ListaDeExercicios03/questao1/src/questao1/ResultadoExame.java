@@ -11,20 +11,20 @@ package questao1;
  */
 public class ResultadoExame {
     private PedidoExame pedido;
-    private Medico medicoRegistrador;
+    private Residente medicoRegistrador;
     private String resultado;
     private String equipamento;
 
     public ResultadoExame(){}
     
-    public ResultadoExame(PedidoExame pedido, Medico medicoRegistrador, String resultado, String equipamento) {
+    public ResultadoExame(PedidoExame pedido, Residente medicoRegistrador, String resultado, String equipamento) {
         this.pedido = pedido;
         this.medicoRegistrador = medicoRegistrador;
         this.resultado = resultado;
         this.equipamento = equipamento;
     }
     
-    public void emitirResultadoExame(PedidoExame pedido, Medico medicoRegistrador, String resultado, String equipamento) {
+    public void emitirResultadoExame(PedidoExame pedido, Residente medicoRegistrador, String resultado, String equipamento) {
         this.pedido = pedido;
         this.medicoRegistrador = medicoRegistrador;
         this.resultado = resultado;
@@ -43,7 +43,7 @@ public class ResultadoExame {
         return medicoRegistrador;
     }
 
-    public void setMedicoRegistrador(Medico medicoRegistrador) {
+    public void setMedicoRegistrador(Residente medicoRegistrador) {
         this.medicoRegistrador = medicoRegistrador;
     }
 

@@ -37,6 +37,6 @@ public class FuncAdministrativo extends Funcionario {
         System.out.println("Faltas: " + super.getNumFaltas());
         System.out.println("Horas Extra: " + super.getNumHorasExtras());
         System.out.println("Salario Base: " + super.getSalarioBase());
-        System.out.println("Salario: R$" + Arredondamento.arredonda(calculaSalarioMes(), 2));
+        System.out.println("Salario: R$" + Arredondamento.arredonda(FolhaPagamento.calculaSalarioMes(this), 2));
     }
 }

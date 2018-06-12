@@ -28,7 +28,7 @@ public class Questao1 {
         ResultadoExame re = new ResultadoExame();
         LaudoMedico lm = new LaudoMedico();
         
-        ArrayList<PedidoExame> arrayPedidoExame = new ArrayList<PedidoExame>();
+        ArrayList<PedidoExame> arrayPedidoExame = new ArrayList<>();
         
         //pedido emitido pelo docente
         pe1.emitirPedido(1, "Hemograma", "14/05/2018", "Z00", p, d);

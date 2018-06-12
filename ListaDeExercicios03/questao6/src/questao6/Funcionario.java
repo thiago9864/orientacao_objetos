@@ -63,18 +63,6 @@ public class Funcionario {
         this.multiplicadorHoraExtra = multiplicadorHoraExtra;
     }
     
-    public float calculaSalarioMes(){
-         float valorHoraTrabalhada = salarioBase / (30 * 8);
-         float salarioMes = salarioBase;
-         
-         //desconta faltas
-         salarioMes -= valorHoraTrabalhada * 8.0f * numFaltas;
-         
-         //conta horas extras
-         salarioMes += valorHoraTrabalhada * 1.5f * numHorasExtras;
-         
-         return salarioMes;
-    }
     
     public void imprime(){
         System.out.println("*Funcionario*");
@@ -82,7 +70,7 @@ public class Funcionario {
         System.out.println("Faltas: " + numFaltas);
         System.out.println("Horas Extra: " + numHorasExtras);
         System.out.println("Salario Base: " + salarioBase);
-        System.out.println("Salario: R$" + Arredondamento.arredonda(calculaSalarioMes(), 2));
+        System.out.println("Salario: R$" + Arredondamento.arredonda(FolhaPagamento.calculaSalarioMes(this), 2));
     }
     
 }
