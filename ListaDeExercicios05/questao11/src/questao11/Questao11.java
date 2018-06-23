@@ -23,22 +23,37 @@ public class Questao11 {
         
         try {
             System.out.println("Digite um inteiro:");
-            int valor1 = s.nextInt();
-            System.out.println("Digite um inteiro:");
-            int valor2 = s.nextInt();
+            String s1 = s.next();
             
+            //se tiver qualquer coisa diferente de numeros, gera uma InputMismatchException
+            if(!s1.matches("[0-9]+")){
+                throw new InputMismatchException();
+            }
+            
+            int valor1 = Integer.valueOf(s1);//isso gera um NumberFormatException
+            
+            System.out.println("Digite um inteiro:");
+            String s2 = s.next();
+            
+            //se tiver qualquer coisa diferente de numeros, gera uma InputMismatchException
+            if(!s1.matches("[0-9]+")){
+                throw new InputMismatchException();
+            }
+            
+            int valor2 = Integer.valueOf(s2);//isso gera um NumberFormatException
+
             System.out.printf("valor1: %d\n", valor1);
             System.out.printf("valor2: %d\n", valor2);
             
-            float resultado = (float)valor1 / valor2;
+            int resultado = valor1 / valor2;
             
-            System.out.printf("Resutado: %f\n", resultado);
-        }
-        catch(NumberFormatException e){
-            System.out.println("Tipo de numero informado nao e inteiro");
+            System.out.printf("Resutado: %d\n", resultado);
         }
         catch(InputMismatchException e){
             System.out.println("O valor digitado nao e um numero");
+        }
+        catch(NumberFormatException e){
+            System.out.println("Tipo de numero informado nao e inteiro");
         }
         catch(ArithmeticException e){
             System.out.println("Divisao por zero.");
