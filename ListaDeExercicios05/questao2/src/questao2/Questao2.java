@@ -19,19 +19,28 @@ public class Questao2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        List<Integer> lista = new LinkedList<Integer>();
+        List<Integer> lista_par = new LinkedList<Integer>();
+        List<Integer> lista_impar = new LinkedList<Integer>();
         
-        for(int i=0; i<25; i++){
-            lista.add(i*2+1);
+        //gera pares
+        for(int i=0; i<10; i++){
+            lista_par.add(i*2);
         }
         
-        System.out.println("Lista antes");
-        imprime(lista);
+        //gera impares
+        for(int i=0; i<10; i++){
+            lista_impar.add(i*2 + 1);
+        }
         
-        System.out.printf("Obj combinado: %d\n\n", ListaMerge.merge(lista, 0, 1));
+        System.out.println("Listas antes");
+        imprime(lista_par);
+        imprime(lista_impar);
         
-        System.out.println("Lista depois");
-        imprime(lista);
+        List<Integer> lista_mesclada = ListaMerge.merge(lista_par, lista_impar);
+        
+        System.out.println("Lista combinada:");
+        imprime(lista_mesclada);
+ 
     }
 
     private static void imprime(List<Integer> lista) {
